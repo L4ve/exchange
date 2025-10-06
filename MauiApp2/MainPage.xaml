@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Entry x:Name="entry" Placeholder="Enter text"/>
+
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <RadioButton x:Name="usdRadio" Content="USD" GroupName="Currency" CheckedChanged="OnCurrencyChanged" />
+                    <Entry x:Name="usdEntry" Text="1,1"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <RadioButton x:Name="eurRadio" Content="EUR" GroupName="Currency" CheckedChanged="OnCurrencyChanged" />
+                    <Entry x:Name="eurEntry" Text="0,9"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <RadioButton x:Name="wongRadio" Content="Wong" GroupName="Currency" CheckedChanged="OnCurrencyChanged" />
+                    <Entry x:Name="wongEntry" Text="999"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <RadioButton x:Name="idkRadio" Content="idk" GroupName="Currency" CheckedChanged="OnCurrencyChanged" />
+                    <Entry x:Name="idkEntry" Text="3,14"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+            <Entry x:Name="entry2" Placeholder="Enter text" IsReadOnly="True"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
